@@ -15,7 +15,9 @@
 		8DBF3D141A7BA61000A2C82A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF3D121A7BA61000A2C82A /* LaunchScreen.xib */; };
 		8DBF3D201A7BA61000A2C82A /* BIS_Homework_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D1F1A7BA61000A2C82A /* BIS_Homework_AppTests.m */; };
 		8DBF3D2C1A7BAD7800A2C82A /* BISLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D2B1A7BAD7800A2C82A /* BISLoginViewController.m */; };
-		8DBF3D2F1A7BAF2B00A2C82A /* BISNetworkService_LoginSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkService_LoginSpec.m */; };
+		8DBF3D2F1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m */; };
+		8DBF3D351A7BB16400A2C82A /* BISNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D341A7BB16400A2C82A /* BISNetworkService.m */; };
+		8DBF3D361A7BB16400A2C82A /* BISNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D341A7BB16400A2C82A /* BISNetworkService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +45,10 @@
 		8DBF3D1F1A7BA61000A2C82A /* BIS_Homework_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIS_Homework_AppTests.m; sourceTree = "<group>"; };
 		8DBF3D2A1A7BAD7800A2C82A /* BISLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginViewController.h; path = ViewControllers/BISLoginViewController.h; sourceTree = "<group>"; };
 		8DBF3D2B1A7BAD7800A2C82A /* BISLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginViewController.m; path = ViewControllers/BISLoginViewController.m; sourceTree = "<group>"; };
-		8DBF3D2D1A7BAF2B00A2C82A /* BISNetworkService_LoginSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISNetworkService_LoginSpec.h; path = NetworkService/BISNetworkService_LoginSpec.h; sourceTree = "<group>"; };
-		8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkService_LoginSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISNetworkService_LoginSpec.m; path = NetworkService/BISNetworkService_LoginSpec.m; sourceTree = "<group>"; };
+		8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISNetworkServiceSpec.m; path = NetworkService/BISNetworkServiceSpec.m; sourceTree = "<group>"; };
 		8DBF3D301A7BAF6800A2C82A /* BIS_Homework_App_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIS_Homework_App_Prefix.pch; sourceTree = "<group>"; };
+		8DBF3D331A7BB16400A2C82A /* BISNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BISNetworkService.h; sourceTree = "<group>"; };
+		8DBF3D341A7BB16400A2C82A /* BISNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BISNetworkService.m; sourceTree = "<group>"; };
 		944636F3BA3A653F847DE9F0 /* Pods-BIS Homework AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BIS Homework AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BIS Homework AppTests/Pods-BIS Homework AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BAE330D5DC659C7079EC319B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C98F7648DA42CBC8C435C4E1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +107,7 @@
 		8DBF3D021A7BA61000A2C82A /* BIS Homework App */ = {
 			isa = PBXGroup;
 			children = (
+				8DBF3D321A7BB11100A2C82A /* Services */,
 				8DBF3D291A7BAD4500A2C82A /* ViewControllers */,
 				8DBF3D071A7BA61000A2C82A /* BISAppDelegate.h */,
 				8DBF3D081A7BA61000A2C82A /* BISAppDelegate.m */,
@@ -126,10 +130,9 @@
 		8DBF3D1C1A7BA61000A2C82A /* BIS Homework AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DBF3D311A7BB0AD00A2C82A /* NetworkServices */,
 				8DBF3D1F1A7BA61000A2C82A /* BIS_Homework_AppTests.m */,
 				8DBF3D1D1A7BA61000A2C82A /* Supporting Files */,
-				8DBF3D2D1A7BAF2B00A2C82A /* BISNetworkService_LoginSpec.h */,
-				8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkService_LoginSpec.m */,
 			);
 			path = "BIS Homework AppTests";
 			sourceTree = "<group>";
@@ -150,6 +153,23 @@
 				8DBF3D2B1A7BAD7800A2C82A /* BISLoginViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8DBF3D311A7BB0AD00A2C82A /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m */,
+			);
+			name = NetworkServices;
+			sourceTree = "<group>";
+		};
+		8DBF3D321A7BB11100A2C82A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8DBF3D331A7BB16400A2C82A /* BISNetworkService.h */,
+				8DBF3D341A7BB16400A2C82A /* BISNetworkService.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		D0DC15A708D6838AE58B4FC3 /* Pods */ = {
@@ -333,6 +353,7 @@
 				8DBF3D091A7BA61000A2C82A /* BISAppDelegate.m in Sources */,
 				8DBF3D061A7BA61000A2C82A /* main.m in Sources */,
 				8DBF3D2C1A7BAD7800A2C82A /* BISLoginViewController.m in Sources */,
+				8DBF3D351A7BB16400A2C82A /* BISNetworkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +361,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBF3D2F1A7BAF2B00A2C82A /* BISNetworkService_LoginSpec.m in Sources */,
+				8DBF3D361A7BB16400A2C82A /* BISNetworkService.m in Sources */,
+				8DBF3D2F1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m in Sources */,
 				8DBF3D201A7BA61000A2C82A /* BIS_Homework_AppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
