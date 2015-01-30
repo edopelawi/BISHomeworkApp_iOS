@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Ice House-Internship. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BISAppDelegate.h"
 
-@interface AppDelegate ()
+@interface BISAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation BISAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
