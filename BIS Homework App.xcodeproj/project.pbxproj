@@ -11,11 +11,10 @@
 		2088323CCA04B5755EA56EC2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98F7648DA42CBC8C435C4E1 /* libPods.a */; };
 		8DBF3D061A7BA61000A2C82A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D051A7BA61000A2C82A /* main.m */; };
 		8DBF3D091A7BA61000A2C82A /* BISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D081A7BA61000A2C82A /* BISAppDelegate.m */; };
-		8DBF3D0C1A7BA61000A2C82A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D0B1A7BA61000A2C82A /* ViewController.m */; };
-		8DBF3D0F1A7BA61000A2C82A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF3D0D1A7BA61000A2C82A /* Main.storyboard */; };
 		8DBF3D111A7BA61000A2C82A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF3D101A7BA61000A2C82A /* Images.xcassets */; };
 		8DBF3D141A7BA61000A2C82A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF3D121A7BA61000A2C82A /* LaunchScreen.xib */; };
 		8DBF3D201A7BA61000A2C82A /* BIS_Homework_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D1F1A7BA61000A2C82A /* BIS_Homework_AppTests.m */; };
+		8DBF3D2C1A7BAD7800A2C82A /* BISLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D2B1A7BAD7800A2C82A /* BISLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +35,13 @@
 		8DBF3D051A7BA61000A2C82A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DBF3D071A7BA61000A2C82A /* BISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BISAppDelegate.h; sourceTree = "<group>"; };
 		8DBF3D081A7BA61000A2C82A /* BISAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BISAppDelegate.m; sourceTree = "<group>"; };
-		8DBF3D0A1A7BA61000A2C82A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8DBF3D0B1A7BA61000A2C82A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8DBF3D0E1A7BA61000A2C82A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DBF3D101A7BA61000A2C82A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8DBF3D131A7BA61000A2C82A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8DBF3D191A7BA61000A2C82A /* BIS Homework AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BIS Homework AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBF3D1E1A7BA61000A2C82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBF3D1F1A7BA61000A2C82A /* BIS_Homework_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIS_Homework_AppTests.m; sourceTree = "<group>"; };
+		8DBF3D2A1A7BAD7800A2C82A /* BISLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginViewController.h; path = ViewControllers/BISLoginViewController.h; sourceTree = "<group>"; };
+		8DBF3D2B1A7BAD7800A2C82A /* BISLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginViewController.m; path = ViewControllers/BISLoginViewController.m; sourceTree = "<group>"; };
 		944636F3BA3A653F847DE9F0 /* Pods-BIS Homework AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BIS Homework AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BIS Homework AppTests/Pods-BIS Homework AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BAE330D5DC659C7079EC319B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C98F7648DA42CBC8C435C4E1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,11 +100,9 @@
 		8DBF3D021A7BA61000A2C82A /* BIS Homework App */ = {
 			isa = PBXGroup;
 			children = (
+				8DBF3D291A7BAD4500A2C82A /* ViewControllers */,
 				8DBF3D071A7BA61000A2C82A /* BISAppDelegate.h */,
 				8DBF3D081A7BA61000A2C82A /* BISAppDelegate.m */,
-				8DBF3D0A1A7BA61000A2C82A /* ViewController.h */,
-				8DBF3D0B1A7BA61000A2C82A /* ViewController.m */,
-				8DBF3D0D1A7BA61000A2C82A /* Main.storyboard */,
 				8DBF3D101A7BA61000A2C82A /* Images.xcassets */,
 				8DBF3D121A7BA61000A2C82A /* LaunchScreen.xib */,
 				8DBF3D031A7BA61000A2C82A /* Supporting Files */,
@@ -138,6 +134,15 @@
 				8DBF3D1E1A7BA61000A2C82A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8DBF3D291A7BAD4500A2C82A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8DBF3D2A1A7BAD7800A2C82A /* BISLoginViewController.h */,
+				8DBF3D2B1A7BAD7800A2C82A /* BISLoginViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D0DC15A708D6838AE58B4FC3 /* Pods */ = {
@@ -236,7 +241,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBF3D0F1A7BA61000A2C82A /* Main.storyboard in Resources */,
 				8DBF3D141A7BA61000A2C82A /* LaunchScreen.xib in Resources */,
 				8DBF3D111A7BA61000A2C82A /* Images.xcassets in Resources */,
 			);
@@ -319,9 +323,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBF3D0C1A7BA61000A2C82A /* ViewController.m in Sources */,
 				8DBF3D091A7BA61000A2C82A /* BISAppDelegate.m in Sources */,
 				8DBF3D061A7BA61000A2C82A /* main.m in Sources */,
+				8DBF3D2C1A7BAD7800A2C82A /* BISLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +348,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8DBF3D0D1A7BA61000A2C82A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8DBF3D0E1A7BA61000A2C82A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8DBF3D121A7BA61000A2C82A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

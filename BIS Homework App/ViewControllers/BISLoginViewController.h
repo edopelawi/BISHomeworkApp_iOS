@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BISLoginViewController.h
 //  BIS Homework App
 //
 //  Created by Ricardo Pramana Suranta on 1/30/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BISLoginViewController : UIViewController
 
 @end
-
