@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		1F29379F0C0B7D751F58F127 /* libPods-BIS Homework AppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C178C63244BD9DC7D3A49D3 /* libPods-BIS Homework AppTests.a */; };
 		2088323CCA04B5755EA56EC2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98F7648DA42CBC8C435C4E1 /* libPods.a */; };
+		8D45814E1A7CE43100B93AB8 /* BISLoginServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D45814D1A7CE43100B93AB8 /* BISLoginServiceSpec.m */; };
+		8D4581561A7CE4D700B93AB8 /* BISLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4581531A7CE4D700B93AB8 /* BISLoginService.m */; };
+		8D4581571A7CE4D700B93AB8 /* BISNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4581551A7CE4D700B93AB8 /* BISNetworkService.m */; };
 		8DBF3D061A7BA61000A2C82A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D051A7BA61000A2C82A /* main.m */; };
 		8DBF3D091A7BA61000A2C82A /* BISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D081A7BA61000A2C82A /* BISAppDelegate.m */; };
 		8DBF3D111A7BA61000A2C82A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF3D101A7BA61000A2C82A /* Images.xcassets */; };
 		8DBF3D141A7BA61000A2C82A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF3D121A7BA61000A2C82A /* LaunchScreen.xib */; };
 		8DBF3D2C1A7BAD7800A2C82A /* BISLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D2B1A7BAD7800A2C82A /* BISLoginViewController.m */; };
 		8DBF3D2F1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m */; };
-		8DBF3D351A7BB16400A2C82A /* BISNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D341A7BB16400A2C82A /* BISNetworkService.m */; };
-		8DBF3D361A7BB16400A2C82A /* BISNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D341A7BB16400A2C82A /* BISNetworkService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,12 @@
 /* Begin PBXFileReference section */
 		4C178C63244BD9DC7D3A49D3 /* libPods-BIS Homework AppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BIS Homework AppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F4C329248E61FDBC66B561 /* Pods-BIS Homework AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BIS Homework AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BIS Homework AppTests/Pods-BIS Homework AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D45814D1A7CE43100B93AB8 /* BISLoginServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginServiceSpec.m; path = NetworkService/BISLoginServiceSpec.m; sourceTree = "<group>"; };
+		8D4581521A7CE4D700B93AB8 /* BISLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginService.h; path = Services/BISLoginService.h; sourceTree = "<group>"; };
+		8D4581531A7CE4D700B93AB8 /* BISLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginService.m; path = Services/BISLoginService.m; sourceTree = "<group>"; };
+		8D4581541A7CE4D700B93AB8 /* BISNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISNetworkService.h; path = Services/BISNetworkService.h; sourceTree = "<group>"; };
+		8D4581551A7CE4D700B93AB8 /* BISNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISNetworkService.m; path = Services/BISNetworkService.m; sourceTree = "<group>"; };
+		8D45815A1A7CEDE100B93AB8 /* BISURLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISURLConstants.h; path = Constants/BISURLConstants.h; sourceTree = "<group>"; };
 		8DBF3D001A7BA61000A2C82A /* BIS Homework App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BIS Homework App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBF3D041A7BA61000A2C82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBF3D051A7BA61000A2C82A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,8 +52,6 @@
 		8DBF3D2B1A7BAD7800A2C82A /* BISLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginViewController.m; path = ViewControllers/BISLoginViewController.m; sourceTree = "<group>"; };
 		8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISNetworkServiceSpec.m; path = NetworkService/BISNetworkServiceSpec.m; sourceTree = "<group>"; };
 		8DBF3D301A7BAF6800A2C82A /* BIS_Homework_App_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIS_Homework_App_Prefix.pch; sourceTree = "<group>"; };
-		8DBF3D331A7BB16400A2C82A /* BISNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BISNetworkService.h; sourceTree = "<group>"; };
-		8DBF3D341A7BB16400A2C82A /* BISNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BISNetworkService.m; sourceTree = "<group>"; };
 		944636F3BA3A653F847DE9F0 /* Pods-BIS Homework AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BIS Homework AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BIS Homework AppTests/Pods-BIS Homework AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BAE330D5DC659C7079EC319B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C98F7648DA42CBC8C435C4E1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +87,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8D4581581A7CEC9200B93AB8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8D45815A1A7CEDE100B93AB8 /* BISURLConstants.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		8DBF3CF71A7BA61000A2C82A = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +118,7 @@
 		8DBF3D021A7BA61000A2C82A /* BIS Homework App */ = {
 			isa = PBXGroup;
 			children = (
+				8D4581581A7CEC9200B93AB8 /* Constants */,
 				8DBF3D321A7BB11100A2C82A /* Services */,
 				8DBF3D291A7BAD4500A2C82A /* ViewControllers */,
 				8DBF3D071A7BA61000A2C82A /* BISAppDelegate.h */,
@@ -156,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m */,
+				8D45814D1A7CE43100B93AB8 /* BISLoginServiceSpec.m */,
 			);
 			name = NetworkServices;
 			sourceTree = "<group>";
@@ -163,8 +178,10 @@
 		8DBF3D321A7BB11100A2C82A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8DBF3D331A7BB16400A2C82A /* BISNetworkService.h */,
-				8DBF3D341A7BB16400A2C82A /* BISNetworkService.m */,
+				8D4581521A7CE4D700B93AB8 /* BISLoginService.h */,
+				8D4581531A7CE4D700B93AB8 /* BISLoginService.m */,
+				8D4581541A7CE4D700B93AB8 /* BISNetworkService.h */,
+				8D4581551A7CE4D700B93AB8 /* BISNetworkService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -347,10 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4581571A7CE4D700B93AB8 /* BISNetworkService.m in Sources */,
+				8D4581561A7CE4D700B93AB8 /* BISLoginService.m in Sources */,
 				8DBF3D091A7BA61000A2C82A /* BISAppDelegate.m in Sources */,
 				8DBF3D061A7BA61000A2C82A /* main.m in Sources */,
 				8DBF3D2C1A7BAD7800A2C82A /* BISLoginViewController.m in Sources */,
-				8DBF3D351A7BB16400A2C82A /* BISNetworkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBF3D361A7BB16400A2C82A /* BISNetworkService.m in Sources */,
+				8D45814E1A7CE43100B93AB8 /* BISLoginServiceSpec.m in Sources */,
 				8DBF3D2F1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
