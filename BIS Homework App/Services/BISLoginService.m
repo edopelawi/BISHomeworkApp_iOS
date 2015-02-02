@@ -32,7 +32,7 @@
                     success:(BISLoginServiceSuccessBlock)successBlock
                     failure:(BISLoginServiceFailureBlock)failureBlock
 {
-    [_networkService postToPath:[BISLoginPath copy]
+    [_networkService postToPath:[BISURLConstantLoginPath copy]
                      parameters:parameters
                         success:^(AFHTTPRequestOperation *operation, id response) {
                             

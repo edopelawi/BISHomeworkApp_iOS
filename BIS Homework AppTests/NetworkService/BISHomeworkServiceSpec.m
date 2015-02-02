@@ -69,7 +69,7 @@ describe(@"on retrieving list of homework", ^{
     });
     
     it(@"should pass homework path to network service", ^{
-        expect(networkPath).to.equal(BISHomeworkPath);
+        expect(networkPath).to.equal(BISURLConstantHomeworkPath);
     });
     
     it(@"should pass an empty dictionary as parameter to network service", ^{

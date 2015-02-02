@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const BISBaseURL;
-extern NSString * const BISLoginPath;
-extern NSString * const BISHomeworkPath;
-extern NSString * const BISTeacherEmailsPath;
+extern NSString * const BISURLConstantBase;
+extern NSString * const BISURLConstantLoginPath;
+extern NSString * const BISURLConstantHomeworkPath;
+extern NSString * const BISURLConstantTeacherEmailsPath;

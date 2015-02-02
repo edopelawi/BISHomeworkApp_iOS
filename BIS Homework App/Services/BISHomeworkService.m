@@ -32,7 +32,7 @@
 - (void)retrieveHomeworksWithSuccess:(BISHomeworkServiceSuccessBlock)successBlock
                              failure:(BISHomeworkServiceFailureBlock)failureBlock
 {
-    [_networkService getFromPath:BISHomeworkPath
+    [_networkService getFromPath:BISURLConstantHomeworkPath
                       parameters:@{}
                          success:^(AFHTTPRequestOperation *operation, id response) {
                              if (successBlock) successBlock(response);

@@ -76,7 +76,7 @@ describe(@"on sending login request", ^{
     
     it(@"should pass login path to network service", ^{
         
-        expect(networkPath).to.equal(BISLoginPath);
+        expect(networkPath).to.equal(BISURLConstantLoginPath);
         
     });
     
