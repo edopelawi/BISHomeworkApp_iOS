@@ -34,11 +34,11 @@
 {
     [_networkService postToPath:[BISURLConstantLoginPath copy]
                      parameters:parameters
-                        success:^(AFHTTPRequestOperation *operation, id response) {
+                        success:^(id response) {
                             
                             if (successBlock) successBlock();
                         }
-                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                        failure:^(NSError *error) {
                             NSString *message = [NSString stringWithFormat:@"Login failed. Error code : %@",@(error.code)];
                             
                             if (failureBlock) failureBlock(message);

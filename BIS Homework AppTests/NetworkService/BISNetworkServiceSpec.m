@@ -13,26 +13,61 @@ SpecBegin(NetworkService)
 
 __block BISNetworkService *networkService;
 __block id manager;
-__block id serializer;
 
 __block NSString *path;
 __block NSDictionary *parameters;
 __block BISNetworkServiceSuccessBlock successBlock;
 __block BISNetworkServiceFailureBlock failureBlock;
+__block BOOL successBlockExecuted;
+__block BOOL failureBlockExecuted;
+
+__block NSString *managerPath;
+__block NSDictionary *managerParameters;
+__block void (^managerSuccessBlock) (AFHTTPRequestOperation *operation, id responseObject);
+__block void (^managerFailureBlock) (AFHTTPRequestOperation *operation, NSError *error);
 
 beforeEach(^{
     NSURL *baseURL = [[NSURL alloc] initWithString:@"http://example.com"];
     
     manager = OCMPartialMock([[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL]);
-    serializer = OCMPartialMock([AFHTTPRequestSerializer serializer]);
+    id serializer = OCMPartialMock([AFHTTPRequestSerializer serializer]);
     OCMStub([manager requestSerializer]).andReturn(serializer);
     
     networkService = [[BISNetworkService alloc] initWithRequestOperationManager:manager];
     
     path = @"/dummy";
     parameters = @{@"param" : @"hello"};
-    successBlock = ^(AFHTTPRequestOperation *operation, id response){};
-    failureBlock = ^(AFHTTPRequestOperation *operation, NSError *error){};
+    
+    successBlock = ^(id response){
+        successBlockExecuted = YES;
+    };
+    
+    failureBlock = ^(NSError *error){
+        failureBlockExecuted = YES;
+    };
+    
+    successBlockExecuted = NO;
+    failureBlockExecuted = NO;
+    
+    void (^managerStubBlock) (NSInvocation *invocation) = ^(NSInvocation *invocation){
+        
+        [invocation retainArguments];
+        [invocation getArgument:&managerPath atIndex:2];
+        [invocation getArgument:&managerParameters atIndex:3];
+        [invocation getArgument:&managerSuccessBlock atIndex:4];
+        [invocation getArgument:&managerFailureBlock atIndex:5];
+        
+    };
+    
+    OCMStub([manager POST:[OCMArg any]
+               parameters:[OCMArg any]
+                  success:[OCMArg any]
+                  failure:[OCMArg any]]).andDo(managerStubBlock);
+    
+    OCMStub([manager POST:[OCMArg any]
+               parameters:[OCMArg any]
+                  success:[OCMArg any]
+                  failure:[OCMArg any]]).andDo(managerStubBlock);
 });
 
 describe(@"on postToPath:parameters:success:failure:", ^{
@@ -51,13 +86,23 @@ describe(@"on postToPath:parameters:success:failure:", ^{
                         failure:[OCMArg any]]);
     });
     
-    it(@"should pass corresponding parameters to operation manager's method", ^{
+    it(@"should pass the path to operation manager's method", ^{
+        expect(managerPath).to.equal(path);
+    });
+    
+    it(@"should pass the parameters dictionary to operation manager's method", ^{
+        expect(managerParameters).to.equal(parameters);
+    });
+    
+    context(@"when request succeeds", ^{
+        before(^{
+            if (!managerSuccessBlock) return;
+            managerSuccessBlock([AFHTTPRequestOperation new],@"operation");
+        });
         
-        OCMVerify([manager POST:path
-                     parameters:parameters
-                        success:successBlock
-                        failure:failureBlock]);
-        
+        it(@"should execute the success block", ^{
+            expect(successBlockExecuted).to.beTruthy();
+        });
     });
 
 });
@@ -78,13 +123,23 @@ describe(@"on getFromPath:parameters:success:failure:", ^{
                        failure:[OCMArg any]]);
     });
     
-    it(@"should pass corresponding parameters to operation manager's method", ^{
+    it(@"should pass the path to operation manager's method", ^{
+        expect(managerPath).to.equal(path);
+    });
+    
+    it(@"should pass the parameters dictionary to operation manager's method", ^{
+        expect(managerParameters).to.equal(parameters);
+    });
+    
+    context(@"when request succeeds", ^{
+        before(^{
+            if (!managerSuccessBlock) return;
+            managerSuccessBlock([AFHTTPRequestOperation new],@"operation");
+        });
         
-        OCMVerify([manager GET:path
-                    parameters:parameters
-                       success:successBlock
-                       failure:failureBlock]);
-        
+        it(@"should execute the success block", ^{
+            expect(successBlockExecuted).to.beTruthy();
+        });
     });
     
 });

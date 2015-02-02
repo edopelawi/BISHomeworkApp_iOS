@@ -37,8 +37,12 @@
 {
     [_operationManager POST:path
                  parameters:parameters
-                    success:successBlock
-                    failure:failureBlock];
+                    success:^(AFHTTPRequestOperation *operation, id requestObject) {
+                        if (successBlock) successBlock(requestObject);
+                    }
+                    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                        if (failureBlock) failureBlock(error);
+                    }];
 }
 
 - (void)getFromPath:(NSString *)path
@@ -48,8 +52,12 @@
 {
     [_operationManager GET:path
                 parameters:parameters
-                   success:successBlock
-                   failure:failureBlock];
+                   success:^(AFHTTPRequestOperation *operation, id requestObject) {
+                       if (successBlock) successBlock(requestObject);
+                   }
+                   failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                       if (failureBlock) failureBlock(error);
+                   }];
 }
 
 @end

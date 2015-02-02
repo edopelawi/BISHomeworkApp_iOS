@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
 
-typedef void (^BISNetworkServiceSuccessBlock) (AFHTTPRequestOperation *operation, id response);
-typedef void (^BISNetworkServiceFailureBlock) (AFHTTPRequestOperation *operation, NSError *error);
+typedef void (^BISNetworkServiceSuccessBlock) (id response);
+typedef void (^BISNetworkServiceFailureBlock) (NSError *error);
 
 @class AFHTTPRequestOperationManager;
 

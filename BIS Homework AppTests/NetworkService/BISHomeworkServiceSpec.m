@@ -79,7 +79,7 @@ describe(@"on retrieving list of homework", ^{
     context(@"when request succeed", ^{
         before(^{
             if (!networkSuccessBlock) return;
-            networkSuccessBlock([AFHTTPRequestOperation new],@"response");
+            networkSuccessBlock(@"response");
         });
         
         it(@"should execute the passed success block", ^{
@@ -91,7 +91,7 @@ describe(@"on retrieving list of homework", ^{
         before(^{
             if (!networkFailureBlock) return;
             NSError *error = [NSError errorWithDomain:@"dummy" code:404 userInfo:@{}];
-            networkFailureBlock([AFHTTPRequestOperation new],error);
+            networkFailureBlock(error);
         });
         
         it(@"should execute the passed failure block", ^{

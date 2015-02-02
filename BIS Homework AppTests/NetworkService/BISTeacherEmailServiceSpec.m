@@ -79,7 +79,7 @@ describe(@"on retrieving teacher emails", ^{
     context(@"when request succeeds", ^{
         before(^{
             if (!networkSuccessBlock) return;
-            networkSuccessBlock([AFHTTPRequestOperation new],@"response");
+            networkSuccessBlock(@"response");
         });
         
         it(@"should execute passed success block", ^{
@@ -91,7 +91,7 @@ describe(@"on retrieving teacher emails", ^{
         before(^{
             if (!networkFailureBlock) return;
             NSError *error = [NSError errorWithDomain:@"dummy" code:404 userInfo:@{}];
-            networkFailureBlock([AFHTTPRequestOperation new],error);
+            networkFailureBlock(error);
         });
         
         it(@"should execute passed failure block", ^{

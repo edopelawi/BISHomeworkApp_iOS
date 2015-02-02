@@ -34,10 +34,10 @@
 {
     [_networkService getFromPath:BISURLConstantTeacherEmailsPath
                       parameters:@{}
-                         success:^(AFHTTPRequestOperation *operation, id response) {
+                         success:^(id response) {
                              if (successBlock) successBlock(response);
                          }
-                         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                         failure:^(NSError *error) {
                              NSString *message = [NSString stringWithFormat:@"Failed to retrieve teacher emails. Error code :%@",@(error.code)];
                              if (failureBlock) failureBlock(message);
                          }];

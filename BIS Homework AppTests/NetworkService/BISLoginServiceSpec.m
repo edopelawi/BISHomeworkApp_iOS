@@ -89,7 +89,7 @@ describe(@"on sending login request", ^{
     context(@"when request succeed", ^{
         before(^{
             if (!networkSuccessBlock) return;
-            networkSuccessBlock([AFHTTPRequestOperation new], @"response!");
+            networkSuccessBlock(@"response!");
         });
         
         it(@"should execute passed success block", ^{
@@ -101,7 +101,7 @@ describe(@"on sending login request", ^{
         before(^{
             if (!networkFailureBlock) return;
             NSError *error = [NSError errorWithDomain:@"dummy" code:404 userInfo:@{}];
-            networkFailureBlock([AFHTTPRequestOperation new],error);
+            networkFailureBlock(error);
         });
         
         it(@"should executed passed failure block", ^{
