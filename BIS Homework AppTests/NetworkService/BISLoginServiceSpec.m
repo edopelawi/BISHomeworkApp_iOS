@@ -72,13 +72,14 @@ describe(@"on sending login request", ^{
     
     it(@"should pass login path to network service", ^{
         
-        expect([BISLoginPath isEqualToString:networkPath]).to.beTruthy();
+        expect(networkPath).to.equal(BISLoginPath);
         
     });
     
     it(@"should pass login parameters to network service", ^{
         
-        expect([parameters isEqualToDictionary:networkParameters]).to.beTruthy();
+        expect(parameters).to.equal(networkParameters);
+        
     });
     
     context(@"when request succeed", ^{
