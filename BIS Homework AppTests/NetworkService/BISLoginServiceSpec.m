@@ -67,6 +67,13 @@ describe(@"on sending login request", ^{
                                   failure:failureBlock];
     });
     
+    it(@"should call networkService's post method", ^{
+        OCMVerify([networkService postToPath:[OCMArg any]
+                                  parameters:[OCMArg any]
+                                     success:[OCMArg any]
+                                     failure:[OCMArg any]]);
+    });
+    
     it(@"should pass login path to network service", ^{
         
         expect(networkPath).to.equal(BISLoginPath);
@@ -81,6 +88,7 @@ describe(@"on sending login request", ^{
     
     context(@"when request succeed", ^{
         before(^{
+            if (!networkSuccessBlock) return;
             networkSuccessBlock([AFHTTPRequestOperation new], @"response!");
         });
         
@@ -91,6 +99,7 @@ describe(@"on sending login request", ^{
     
     context(@"when request failed", ^{
         before(^{
+            if (!networkFailureBlock) return;
             NSError *error = [NSError errorWithDomain:@"dummy" code:404 userInfo:@{}];
             networkFailureBlock([AFHTTPRequestOperation new],error);
         });
