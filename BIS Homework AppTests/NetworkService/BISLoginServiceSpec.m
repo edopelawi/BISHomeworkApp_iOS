@@ -14,7 +14,6 @@ SpecBegin(LoginService)
 
 __block BISLoginService *loginService;
 __block id networkService;
-__block id operationManager;
 
 __block NSDictionary *parameters;
 __block BISLoginServiceSuccessBlock successBlock;
@@ -29,9 +28,7 @@ __block BISNetworkServiceFailureBlock networkFailureBlock;
 
 beforeEach(^{
     
-    NSURL *baseURL = [NSURL URLWithString:@"http://example.com"];
-    operationManager = OCMPartialMock([[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL]);
-    
+    id operationManager = OCMPartialMock([AFHTTPRequestOperationManager new]);
     networkService = OCMPartialMock([[BISNetworkService alloc]initWithRequestOperationManager:operationManager]);
     
     loginService = [[BISLoginService alloc] initWithNetworkService:networkService];
