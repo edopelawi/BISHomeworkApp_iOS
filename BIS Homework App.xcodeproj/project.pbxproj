@@ -17,6 +17,9 @@
 		8D5FD7521A7F36A00067ED6A /* BISHomeworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FD7511A7F36A00067ED6A /* BISHomeworkService.m */; };
 		8D5FD7541A7F36B20067ED6A /* BISHomeworkServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FD7531A7F36B20067ED6A /* BISHomeworkServiceSpec.m */; };
 		8D5FD7551A7F36BA0067ED6A /* BISHomeworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FD7511A7F36A00067ED6A /* BISHomeworkService.m */; };
+		8D5FD7571A7F3BE90067ED6A /* BISTeacherEmailServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FD7561A7F3BE90067ED6A /* BISTeacherEmailServiceSpec.m */; };
+		8D5FD75A1A7F3C1D0067ED6A /* BISTeacherEmailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FD7591A7F3C1D0067ED6A /* BISTeacherEmailService.m */; };
+		8D5FD75B1A7F3C1D0067ED6A /* BISTeacherEmailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FD7591A7F3C1D0067ED6A /* BISTeacherEmailService.m */; };
 		8DBF3D061A7BA61000A2C82A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D051A7BA61000A2C82A /* main.m */; };
 		8DBF3D091A7BA61000A2C82A /* BISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF3D081A7BA61000A2C82A /* BISAppDelegate.m */; };
 		8DBF3D111A7BA61000A2C82A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF3D101A7BA61000A2C82A /* Images.xcassets */; };
@@ -48,6 +51,9 @@
 		8D5FD7501A7F36A00067ED6A /* BISHomeworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISHomeworkService.h; path = Services/BISHomeworkService.h; sourceTree = "<group>"; };
 		8D5FD7511A7F36A00067ED6A /* BISHomeworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISHomeworkService.m; path = Services/BISHomeworkService.m; sourceTree = "<group>"; };
 		8D5FD7531A7F36B20067ED6A /* BISHomeworkServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISHomeworkServiceSpec.m; path = NetworkService/BISHomeworkServiceSpec.m; sourceTree = "<group>"; };
+		8D5FD7561A7F3BE90067ED6A /* BISTeacherEmailServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISTeacherEmailServiceSpec.m; path = NetworkService/BISTeacherEmailServiceSpec.m; sourceTree = "<group>"; };
+		8D5FD7581A7F3C1D0067ED6A /* BISTeacherEmailService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISTeacherEmailService.h; path = Services/BISTeacherEmailService.h; sourceTree = "<group>"; };
+		8D5FD7591A7F3C1D0067ED6A /* BISTeacherEmailService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISTeacherEmailService.m; path = Services/BISTeacherEmailService.m; sourceTree = "<group>"; };
 		8DBF3D001A7BA61000A2C82A /* BIS Homework App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BIS Homework App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBF3D041A7BA61000A2C82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBF3D051A7BA61000A2C82A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 				8DBF3D2E1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m */,
 				8D45814D1A7CE43100B93AB8 /* BISLoginServiceSpec.m */,
 				8D5FD7531A7F36B20067ED6A /* BISHomeworkServiceSpec.m */,
+				8D5FD7561A7F3BE90067ED6A /* BISTeacherEmailServiceSpec.m */,
 			);
 			name = NetworkServices;
 			sourceTree = "<group>";
@@ -195,6 +202,8 @@
 				8D4581551A7CE4D700B93AB8 /* BISNetworkService.m */,
 				8D5FD7501A7F36A00067ED6A /* BISHomeworkService.h */,
 				8D5FD7511A7F36A00067ED6A /* BISHomeworkService.m */,
+				8D5FD7581A7F3C1D0067ED6A /* BISTeacherEmailService.h */,
+				8D5FD7591A7F3C1D0067ED6A /* BISTeacherEmailService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 				8DBF3D061A7BA61000A2C82A /* main.m in Sources */,
 				8DBF3D2C1A7BAD7800A2C82A /* BISLoginViewController.m in Sources */,
 				8D1EF0991A7F3281007C7155 /* BISURLConstants.m in Sources */,
+				8D5FD75A1A7F3C1D0067ED6A /* BISTeacherEmailService.m in Sources */,
 				8D5FD7521A7F36A00067ED6A /* BISHomeworkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,7 +404,9 @@
 				8D1EF09A1A7F3281007C7155 /* BISURLConstants.m in Sources */,
 				8D5FD7551A7F36BA0067ED6A /* BISHomeworkService.m in Sources */,
 				8D5FD7541A7F36B20067ED6A /* BISHomeworkServiceSpec.m in Sources */,
+				8D5FD7571A7F3BE90067ED6A /* BISTeacherEmailServiceSpec.m in Sources */,
 				8D45814E1A7CE43100B93AB8 /* BISLoginServiceSpec.m in Sources */,
+				8D5FD75B1A7F3C1D0067ED6A /* BISTeacherEmailService.m in Sources */,
 				8DBF3D2F1A7BAF2B00A2C82A /* BISNetworkServiceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
