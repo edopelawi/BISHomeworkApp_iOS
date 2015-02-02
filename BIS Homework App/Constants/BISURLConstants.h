@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-const NSString *BISBaseURL = @"http://203.153.99.219/bisdev";
-const NSString *BISLoginPath = @"/login.php";
-const NSString *BISHomeworkPath = @"/hw-api.php?q=getCurrentHomeworkList";
-const NSString *BISTeacherEmailsPath = @"/hw-api.php?q=getEmailList";
+extern NSString * const BISBaseURL;
+extern NSString * const BISLoginPath;
+extern NSString * const BISHomeworkPath;
+extern NSString * const BISTeacherEmailsPath;
