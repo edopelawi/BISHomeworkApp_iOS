@@ -20,6 +20,8 @@
 
 - (instancetype)initWithNetworkService:(BISNetworkService *)networkService
 {
+    NSParameterAssert(networkService);
+    
     self = [super init];
     
     if (self) {

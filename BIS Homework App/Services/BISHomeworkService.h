@@ -7,15 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BISNetworkServiceDependant.h"
 
 typedef void (^BISHomeworkServiceSuccessBlock) (NSArray *homeworks);
 typedef void (^BISHomeworkServiceFailureBlock) (NSString *message);
 
 @class BISNetworkService;
 
-@interface BISHomeworkService : NSObject
-
-- (instancetype)initWithNetworkService:(BISNetworkService *)networkService;
+@interface BISHomeworkService : NSObject <BISNetworkServiceDependant>
 
 - (void)retrieveHomeworksWithSuccess:(BISHomeworkServiceSuccessBlock)successBlock
                              failure:(BISHomeworkServiceFailureBlock)failureBlock;

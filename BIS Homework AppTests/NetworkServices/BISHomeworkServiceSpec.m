@@ -9,6 +9,7 @@
 #import "BISNetworkService.h"
 #import "BISHomeworkService.h"
 #import "BISURLConstants.h"
+#import "BISSharedExampleConstants.h"
 
 SpecBegin(HomeworkService)
 
@@ -26,9 +27,7 @@ __block BISNetworkServiceSuccessBlock networkSuccessBlock;
 __block BISNetworkServiceFailureBlock networkFailureBlock;
 
 beforeEach(^{
-    id operationManager = OCMPartialMock([AFHTTPRequestOperationManager new]);
-    networkService = OCMPartialMock([[BISNetworkService alloc] initWithRequestOperationManager:operationManager]);
-    
+    networkService = OCMPartialMock([BISNetworkService new]);
     homeworkService = [[BISHomeworkService alloc] initWithNetworkService:networkService];
     
     successBlock = ^(NSArray *homeworks){
@@ -52,6 +51,11 @@ beforeEach(^{
         [invocation getArgument:&networkSuccessBlock atIndex:4];
         [invocation getArgument:&networkFailureBlock atIndex:5];
     });
+});
+
+describe(@"BISNetworkServiceDependant behavior", ^{
+    NSDictionary *data = @{BISSharedExampleClassKey : [BISHomeworkService class]};
+    itBehavesLike(BISSharedExampleNetworkServiceDependant, data);
 });
 
 describe(@"on retrieving list of homework", ^{
