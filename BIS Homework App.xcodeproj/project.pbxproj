@@ -61,6 +61,7 @@
 		8D04A8B61A807E8400B7FCC5 /* BISNetworkServiceInitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BISNetworkServiceInitSpec.m; sourceTree = "<group>"; };
 		8D04A8BC1A8094FB00B7FCC5 /* BISLoginServiceInitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BISLoginServiceInitSpec.m; sourceTree = "<group>"; };
 		8D04A8BE1A8096A500B7FCC5 /* BISLoginServiceFactorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginServiceFactorySpec.m; path = Factories/BISLoginServiceFactorySpec.m; sourceTree = "<group>"; };
+		8D04A8C11A80B4DB00B7FCC5 /* BISNetworkServiceDependant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISNetworkServiceDependant.h; path = Protocols/BISNetworkServiceDependant.h; sourceTree = "<group>"; };
 		8D1EF0981A7F3281007C7155 /* BISURLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISURLConstants.m; path = Constants/BISURLConstants.m; sourceTree = "<group>"; };
 		8D4581521A7CE4D700B93AB8 /* BISLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginService.h; path = Services/BISLoginService.h; sourceTree = "<group>"; };
 		8D4581531A7CE4D700B93AB8 /* BISLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginService.m; path = Services/BISLoginService.m; sourceTree = "<group>"; };
@@ -150,6 +151,14 @@
 			path = NetworkServices;
 			sourceTree = "<group>";
 		};
+		8D04A8C01A80B33600B7FCC5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8D04A8C11A80B4DB00B7FCC5 /* BISNetworkServiceDependant.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		8D4581581A7CEC9200B93AB8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +193,7 @@
 			children = (
 				8D4581581A7CEC9200B93AB8 /* Constants */,
 				8D04A8911A805FBD00B7FCC5 /* Factories */,
+				8D04A8C01A80B33600B7FCC5 /* Protocols */,
 				8DBF3D321A7BB11100A2C82A /* Services */,
 				8DBF3D291A7BAD4500A2C82A /* ViewControllers */,
 				8DBF3D071A7BA61000A2C82A /* BISAppDelegate.h */,
