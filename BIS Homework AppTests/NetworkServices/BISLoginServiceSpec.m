@@ -9,6 +9,7 @@
 #import "BISLoginService.h"
 #import "BISNetworkService.h"
 #import "BISURLConstants.h"
+#import "BISSharedExampleConstants.h"
 
 SpecBegin(LoginService)
 
@@ -28,8 +29,7 @@ __block BISNetworkServiceFailureBlock networkFailureBlock;
 
 beforeEach(^{
     
-    id operationManager = OCMPartialMock([AFHTTPRequestOperationManager new]);
-    networkService = OCMPartialMock([[BISNetworkService alloc]initWithRequestOperationManager:operationManager]);
+    networkService = OCMPartialMock([BISNetworkService new]);
     
     loginService = [[BISLoginService alloc] initWithNetworkService:networkService];
     
@@ -58,10 +58,14 @@ beforeEach(^{
     });
 });
 
+describe(@"BISNetworkServiceDependant behavior", ^{
+    NSDictionary *data = @{BISSharedExampleClassKey : [BISLoginService class]};
+    itBehavesLike(BISSharedExampleNetworkServiceDependant, data);
+});
+
 describe(@"on sending login request", ^{
     
     beforeEach(^{
-        
         [loginService loginWithParameters:parameters
                                   success:successBlock
                                   failure:failureBlock];
@@ -75,7 +79,7 @@ describe(@"on sending login request", ^{
     });
     
     it(@"should pass login path to network service", ^{
-        
+
         expect(networkPath).to.equal(BISURLConstantLoginPath);
         
     });
