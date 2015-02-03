@@ -7,9 +7,9 @@
 //
 
 #import "BISNetworkService.h"
+#import "BISNetworkManagerFactory.h"
 
 #import <AFNetworking.h>
-
 
 @interface BISNetworkService ()
 
@@ -18,6 +18,13 @@
 @end
 
 @implementation BISNetworkService
+
++ (BISNetworkService *)networkService
+{
+    AFHTTPRequestOperationManager *operationManager = [BISNetworkManagerFactory AFHTTPRequestOperationManagerForBISServer];
+    
+    return [[BISNetworkService alloc] initWithRequestOperationManager:operationManager];
+}
 
 - (instancetype)init
 {

@@ -16,6 +16,8 @@ typedef void (^BISNetworkServiceFailureBlock) (NSError *error);
 
 @interface BISNetworkService : NSObject
 
++ (BISNetworkService *)networkService;
+
 /// Deprecated. Use @c initWithRequestOperationManager: instead.
 - (instancetype)init __deprecated;
 

@@ -16,7 +16,10 @@
 		8D04A8AE1A80604A00B7FCC5 /* BISNetworkServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8AA1A80604A00B7FCC5 /* BISNetworkServiceSpec.m */; };
 		8D04A8AF1A80604A00B7FCC5 /* BISTeacherEmailServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8AB1A80604A00B7FCC5 /* BISTeacherEmailServiceSpec.m */; };
 		8D04A8B31A80669800B7FCC5 /* BISNetworkManagerFactorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8B21A80669800B7FCC5 /* BISNetworkManagerFactorySpec.m */; };
+		8D04A8B51A80789200B7FCC5 /* BISNetworkServiceFactorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8B41A80789200B7FCC5 /* BISNetworkServiceFactorySpec.m */; };
 		8D04A8B71A807E8400B7FCC5 /* BISNetworkServiceInitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8B61A807E8400B7FCC5 /* BISNetworkServiceInitSpec.m */; };
+		8D04A8B81A808BD900B7FCC5 /* BISNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4581551A7CE4D700B93AB8 /* BISNetworkService.m */; };
+		8D04A8B91A808BF800B7FCC5 /* BISLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4581531A7CE4D700B93AB8 /* BISLoginService.m */; };
 		8D1EF0991A7F3281007C7155 /* BISURLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EF0981A7F3281007C7155 /* BISURLConstants.m */; };
 		8D1EF09A1A7F3281007C7155 /* BISURLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EF0981A7F3281007C7155 /* BISURLConstants.m */; };
 		8D4581561A7CE4D700B93AB8 /* BISLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4581531A7CE4D700B93AB8 /* BISLoginService.m */; };
@@ -52,6 +55,7 @@
 		8D04A8AA1A80604A00B7FCC5 /* BISNetworkServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BISNetworkServiceSpec.m; sourceTree = "<group>"; };
 		8D04A8AB1A80604A00B7FCC5 /* BISTeacherEmailServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BISTeacherEmailServiceSpec.m; sourceTree = "<group>"; };
 		8D04A8B21A80669800B7FCC5 /* BISNetworkManagerFactorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISNetworkManagerFactorySpec.m; path = Factories/BISNetworkManagerFactorySpec.m; sourceTree = "<group>"; };
+		8D04A8B41A80789200B7FCC5 /* BISNetworkServiceFactorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISNetworkServiceFactorySpec.m; path = Factories/BISNetworkServiceFactorySpec.m; sourceTree = "<group>"; };
 		8D04A8B61A807E8400B7FCC5 /* BISNetworkServiceInitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BISNetworkServiceInitSpec.m; sourceTree = "<group>"; };
 		8D1EF0981A7F3281007C7155 /* BISURLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISURLConstants.m; path = Constants/BISURLConstants.m; sourceTree = "<group>"; };
 		8D4581521A7CE4D700B93AB8 /* BISLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginService.h; path = Services/BISLoginService.h; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8D04A8B21A80669800B7FCC5 /* BISNetworkManagerFactorySpec.m */,
+				8D04A8B41A80789200B7FCC5 /* BISNetworkServiceFactorySpec.m */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -430,8 +435,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D04A8B51A80789200B7FCC5 /* BISNetworkServiceFactorySpec.m in Sources */,
+				8D04A8B91A808BF800B7FCC5 /* BISLoginService.m in Sources */,
 				8D04A8981A80600400B7FCC5 /* BISNetworkManagerFactory.m in Sources */,
 				8D04A8AC1A80604A00B7FCC5 /* BISHomeworkServiceSpec.m in Sources */,
+				8D04A8B81A808BD900B7FCC5 /* BISNetworkService.m in Sources */,
 				8D04A8B71A807E8400B7FCC5 /* BISNetworkServiceInitSpec.m in Sources */,
 				8D1EF09A1A7F3281007C7155 /* BISURLConstants.m in Sources */,
 				8D04A8AD1A80604A00B7FCC5 /* BISLoginServiceSpec.m in Sources */,
