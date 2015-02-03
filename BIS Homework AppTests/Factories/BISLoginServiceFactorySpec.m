@@ -20,12 +20,11 @@ SpecBegin(LoginServiceFactory)
 describe(@"loginService factory method", ^{
     
     __block BISLoginService *loginService;
-    __block id networkService;
     __block id BISNetworkServiceMock;
+    __block id networkService;
 
-    
     beforeEach(^{
-        networkService = OCMPartialMock([BISNetworkService networkService]);
+        networkService = OCMPartialMock([BISNetworkService new]);
         
         BISNetworkServiceMock = OCMClassMock([BISNetworkService class]);
         OCMStub([BISNetworkServiceMock networkService]).andReturn(networkService);
