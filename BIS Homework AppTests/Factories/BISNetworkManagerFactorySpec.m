@@ -18,7 +18,7 @@ describe(@"on building AFHTTPRequestOperationManager", ^{
     __block AFHTTPRequestOperationManager *operationManager;
     
     beforeEach(^{
-        operationManager = [BISNetworkManagerFactory AFHTTPRequestOperationManagerForBISServer];
+        operationManager = [BISNetworkManagerFactory AFHTTPRequestOperationManager];
     });
     
     it(@"should return object of AFHTTPRequestOperationManager class ", ^{

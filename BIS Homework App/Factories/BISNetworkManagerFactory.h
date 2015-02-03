@@ -12,6 +12,6 @@
 
 @interface BISNetworkManagerFactory : NSObject
 
-+ (AFHTTPRequestOperationManager *)AFHTTPRequestOperationManagerForBISServer;
++ (AFHTTPRequestOperationManager *)AFHTTPRequestOperationManager;
 
 @end

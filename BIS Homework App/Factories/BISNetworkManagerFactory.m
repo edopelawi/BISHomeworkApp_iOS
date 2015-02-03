@@ -13,7 +13,7 @@
 
 @implementation BISNetworkManagerFactory
 
-+ (AFHTTPRequestOperationManager *)AFHTTPRequestOperationManagerForBISServer
++ (AFHTTPRequestOperationManager *)AFHTTPRequestOperationManager
 {
     NSURL *baseURL = [NSURL URLWithString:BISURLConstantBase];
     AFHTTPRequestOperationManager *operationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];

@@ -30,7 +30,7 @@ describe(@"networkService factory method", ^{
         
         BISNetworkManagerFactoryMock = OCMClassMock([BISNetworkManagerFactory class]);
         
-        OCMStub([BISNetworkManagerFactoryMock AFHTTPRequestOperationManagerForBISServer]).andReturn(operationManager);
+        OCMStub([BISNetworkManagerFactoryMock AFHTTPRequestOperationManager]).andReturn(operationManager);
         
         networkService = [BISNetworkService networkService];
     });
@@ -39,7 +39,7 @@ describe(@"networkService factory method", ^{
         expect(networkService).to.beInstanceOf([BISNetworkService class]);
     });
     
-    it(@"should use operation manager object from BISNetworkManagerFactory's AFHTTPRequestOperationManagerForBISServer method", ^{
+    it(@"should use operation manager object from BISNetworkManagerFactory's AFHTTPRequestOperationManager method", ^{
         
         expect(networkService.operationManager).to.beIdenticalTo(operationManager);
     });

@@ -21,7 +21,7 @@
 
 + (BISNetworkService *)networkService
 {
-    AFHTTPRequestOperationManager *operationManager = [BISNetworkManagerFactory AFHTTPRequestOperationManagerForBISServer];
+    AFHTTPRequestOperationManager *operationManager = [BISNetworkManagerFactory AFHTTPRequestOperationManager];
     
     return [[BISNetworkService alloc] initWithRequestOperationManager:operationManager];
 }
