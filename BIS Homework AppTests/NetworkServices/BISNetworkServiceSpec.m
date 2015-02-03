@@ -27,11 +27,7 @@ __block void (^managerSuccessBlock) (AFHTTPRequestOperation *operation, id respo
 __block void (^managerFailureBlock) (AFHTTPRequestOperation *operation, NSError *error);
 
 beforeEach(^{
-    NSURL *baseURL = [[NSURL alloc] initWithString:@"http://example.com"];
-    
-    manager = OCMPartialMock([[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL]);
-    id serializer = OCMPartialMock([AFHTTPRequestSerializer serializer]);
-    OCMStub([manager requestSerializer]).andReturn(serializer);
+    manager = OCMPartialMock([AFHTTPRequestOperationManager new]);
     
     networkService = [[BISNetworkService alloc] initWithRequestOperationManager:manager];
     
