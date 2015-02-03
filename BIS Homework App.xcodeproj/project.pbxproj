@@ -25,6 +25,8 @@
 		8D04A8C41A80B84D00B7FCC5 /* BISSharedExampleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8C31A80B84D00B7FCC5 /* BISSharedExampleConstants.m */; };
 		8D04A8C61A80BE6200B7FCC5 /* BISHomeworkServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8C51A80BE6200B7FCC5 /* BISHomeworkServiceFactory.m */; };
 		8D04A8C81A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8C71A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m */; };
+		8D04A8D11A80C58C00B7FCC5 /* BISLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8D01A80C58C00B7FCC5 /* BISLoginView.m */; };
+		8D04A8D31A80C5AF00B7FCC5 /* BISLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D04A8D21A80C5AF00B7FCC5 /* BISLoginView.xib */; };
 		8D1EF0991A7F3281007C7155 /* BISURLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EF0981A7F3281007C7155 /* BISURLConstants.m */; };
 		8D1EF09A1A7F3281007C7155 /* BISURLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EF0981A7F3281007C7155 /* BISURLConstants.m */; };
 		8D4581561A7CE4D700B93AB8 /* BISLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4581531A7CE4D700B93AB8 /* BISLoginService.m */; };
@@ -69,6 +71,9 @@
 		8D04A8C31A80B84D00B7FCC5 /* BISSharedExampleConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BISSharedExampleConstants.m; sourceTree = "<group>"; };
 		8D04A8C51A80BE6200B7FCC5 /* BISHomeworkServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISHomeworkServiceFactory.m; path = Factories/BISHomeworkServiceFactory.m; sourceTree = "<group>"; };
 		8D04A8C71A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISTeacherEmailServiceFactorySpec.m; path = Factories/BISTeacherEmailServiceFactorySpec.m; sourceTree = "<group>"; };
+		8D04A8CF1A80C58C00B7FCC5 /* BISLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginView.h; path = Views/BISLoginView.h; sourceTree = "<group>"; };
+		8D04A8D01A80C58C00B7FCC5 /* BISLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginView.m; path = Views/BISLoginView.m; sourceTree = "<group>"; };
+		8D04A8D21A80C5AF00B7FCC5 /* BISLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BISLoginView.xib; path = Views/BISLoginView.xib; sourceTree = "<group>"; };
 		8D1EF0981A7F3281007C7155 /* BISURLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISURLConstants.m; path = Constants/BISURLConstants.m; sourceTree = "<group>"; };
 		8D4581521A7CE4D700B93AB8 /* BISLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginService.h; path = Services/BISLoginService.h; sourceTree = "<group>"; };
 		8D4581531A7CE4D700B93AB8 /* BISLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginService.m; path = Services/BISLoginService.m; sourceTree = "<group>"; };
@@ -168,6 +173,16 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		8D04A8CE1A80C57500B7FCC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D04A8CF1A80C58C00B7FCC5 /* BISLoginView.h */,
+				8D04A8D01A80C58C00B7FCC5 /* BISLoginView.m */,
+				8D04A8D21A80C5AF00B7FCC5 /* BISLoginView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		8D4581581A7CEC9200B93AB8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +219,7 @@
 				8D04A8911A805FBD00B7FCC5 /* Factories */,
 				8D04A8C01A80B33600B7FCC5 /* Protocols */,
 				8DBF3D321A7BB11100A2C82A /* Services */,
+				8D04A8CE1A80C57500B7FCC5 /* Views */,
 				8DBF3D291A7BAD4500A2C82A /* ViewControllers */,
 				8DBF3D071A7BA61000A2C82A /* BISAppDelegate.h */,
 				8DBF3D081A7BA61000A2C82A /* BISAppDelegate.m */,
@@ -365,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBF3D141A7BA61000A2C82A /* LaunchScreen.xib in Resources */,
+				8D04A8D31A80C5AF00B7FCC5 /* BISLoginView.xib in Resources */,
 				8DBF3D111A7BA61000A2C82A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +472,7 @@
 				8D1EF0991A7F3281007C7155 /* BISURLConstants.m in Sources */,
 				8D5FD75A1A7F3C1D0067ED6A /* BISTeacherEmailService.m in Sources */,
 				8D5FD7521A7F36A00067ED6A /* BISHomeworkService.m in Sources */,
+				8D04A8D11A80C58C00B7FCC5 /* BISLoginView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
