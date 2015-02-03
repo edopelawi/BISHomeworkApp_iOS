@@ -19,6 +19,16 @@
 
 @implementation BISNetworkService
 
+- (instancetype)init
+{
+    NSString *exceptionString = @"Invalid initializer for BISNetworkService class. Use - (instancetype)initWithRequestOperationManager:(AFHTTPRequestOperationManager *)manager instead.";
+    
+    [NSException raise:NSInternalInconsistencyException
+                format:@"%@",exceptionString];
+    
+    return nil;
+}
+
 - (instancetype)initWithRequestOperationManager:(AFHTTPRequestOperationManager *)manager
 {
     self = [super init];
