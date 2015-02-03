@@ -10,16 +10,20 @@
 #import "BISNetworkService.h"
 #import "BISURLConstants.h"
 
+#import <AFNetworking.h>
+
 @interface BISLoginService ()
 
 @property (nonatomic, strong) BISNetworkService *networkService;
+
 @end
 
 @implementation BISLoginService
 
 + (BISLoginService *)loginService
 {
-    return nil;
+    BISNetworkService *networkService = [BISNetworkService networkService];
+    return [[BISLoginService alloc] initWithNetworkService:networkService];
 }
 
 - (instancetype)init
