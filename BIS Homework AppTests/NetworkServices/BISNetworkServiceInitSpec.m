@@ -13,12 +13,6 @@ SpecBegin(NetworkServiceInitialization)
 
 __block BISNetworkService *networkService;
 
-it(@"should raise NSInternalInconsistencyException if initialized using init: method", ^{
-    expect(^{
-        networkService = [BISNetworkService new];
-    }).to.raise(NSInternalInconsistencyException);
-});
-
 describe(@"on initWithRequestOperationManager:", ^{
     
     it(@"should raise exception if nil passed as parameter", ^{
