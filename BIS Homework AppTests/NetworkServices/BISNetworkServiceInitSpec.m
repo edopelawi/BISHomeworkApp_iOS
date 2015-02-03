@@ -19,9 +19,18 @@ it(@"should raise NSInternalInconsistencyException if initialized using init: me
     }).to.raise(NSInternalInconsistencyException);
 });
 
-it(@"should return BISNetworkService object for initWithRequestOperationManager", ^{
-    networkService = [[BISNetworkService alloc] initWithRequestOperationManager:[AFHTTPRequestOperationManager new]];
-    expect(networkService.class).to.equal(BISNetworkService.class);
+describe(@"on initWithRequestOperationManager:", ^{
+    
+    it(@"should raise exception if nil passed as parameter", ^{
+        expect(^{
+            networkService = [[BISNetworkService alloc] initWithRequestOperationManager:nil];
+        }).to.raise(NSInternalInconsistencyException);
+    });
+    
+    it(@"should return BISNetworkService object", ^{
+        networkService = [[BISNetworkService alloc] initWithRequestOperationManager:[AFHTTPRequestOperationManager new]];
+        expect(networkService.class).to.equal(BISNetworkService.class);
+    });
 });
 
 SpecEnd

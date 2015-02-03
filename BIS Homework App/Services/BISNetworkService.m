@@ -31,6 +31,8 @@
 
 - (instancetype)initWithRequestOperationManager:(AFHTTPRequestOperationManager *)manager
 {
+    NSParameterAssert(manager);
+    
     self = [super init];
     
     if (self) {
