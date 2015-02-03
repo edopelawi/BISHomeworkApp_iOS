@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+#import "BISNetworkServiceDependant.h"
+
 typedef void (^BISLoginServiceSuccessBlock) ();
 typedef void (^BISLoginServiceFailureBlock) (NSString *errorMessage);
 
 @class BISNetworkService;
 
-@interface BISLoginService : NSObject
+@interface BISLoginService : NSObject <BISNetworkServiceDependant>
 
 + (BISLoginService *)loginService;
-
-- (instancetype)initWithNetworkService:(BISNetworkService *)networkService;
 
 - (void)loginWithParameters:(NSDictionary *)parameters
                     success:(BISLoginServiceSuccessBlock)successBlock
