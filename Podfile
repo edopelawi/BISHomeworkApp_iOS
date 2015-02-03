@@ -3,6 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
 
 pod 'AFNetworking', '~> 2.5'
+pod 'TPKeyboardAvoiding', '~> 1.2'
 
 target 'BIS Homework AppTests' do
 	pod 'Specta', '~> 0.2'

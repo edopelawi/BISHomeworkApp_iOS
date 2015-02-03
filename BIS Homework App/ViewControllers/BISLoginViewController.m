@@ -7,18 +7,25 @@
 //
 
 #import "BISLoginViewController.h"
+#import "BISLoginView.h"
 
 @interface BISLoginViewController ()
+
+@property (strong, nonatomic) BISLoginView *mainView;
 
 @end
 
 @implementation BISLoginViewController
 
+- (void)loadView
+{
+    _mainView = [BISLoginView new];
+    [self setView:_mainView];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // TODO: implement necessary code here.
-    self.view.backgroundColor = [UIColor blueColor];
 }
 
 @end
