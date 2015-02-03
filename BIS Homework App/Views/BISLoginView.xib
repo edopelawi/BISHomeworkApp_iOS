@@ -15,13 +15,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ot6-re-eo3">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="1136"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="566-RL-Lqw">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="1136"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_bis" translatesAutoresizingMaskIntoConstraints="NO" id="oHW-6I-8eb">
-                                    <rect key="frame" x="40" y="60" width="54" height="60"/>
+                                    <rect key="frame" x="40" y="80" width="54" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="Dz9-8n-12q"/>
                                         <constraint firstAttribute="width" secondItem="oHW-6I-8eb" secondAttribute="height" multiplier="9:10" id="g3p-Bg-zAk"/>
@@ -34,25 +34,25 @@
                                     </variation>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="British" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ML-L2-fk4">
-                                    <rect key="frame" x="40" y="140" width="105" height="46"/>
+                                    <rect key="frame" x="40" y="160" width="105" height="46"/>
                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="International" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6F-dd-jOc">
-                                    <rect key="frame" x="40" y="196" width="206" height="46"/>
+                                    <rect key="frame" x="40" y="216" width="206" height="46"/>
                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elH-xs-CmD">
-                                    <rect key="frame" x="40" y="262" width="109" height="46"/>
+                                    <rect key="frame" x="40" y="282" width="109" height="46"/>
                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MWV-vq-sLD">
-                                    <rect key="frame" x="40" y="368" width="520" height="20"/>
+                                    <rect key="frame" x="40" y="388" width="520" height="20"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="br2-hH-a1Y"/>
@@ -62,7 +62,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="38T-fs-gcr">
-                                    <rect key="frame" x="40" y="398" width="520" height="20"/>
+                                    <rect key="frame" x="40" y="418" width="520" height="20"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="mUm-Ep-vpR"/>
@@ -72,7 +72,7 @@
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh3-W0-iOB">
-                                    <rect key="frame" x="40" y="458" width="520" height="44"/>
+                                    <rect key="frame" x="40" y="478" width="520" height="44"/>
                                     <color key="backgroundColor" red="0.96862745100000003" green="0.090196078430000007" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="xpD-UV-pcE"/>
@@ -96,14 +96,15 @@
                                 <constraint firstItem="o6F-dd-jOc" firstAttribute="leading" secondItem="elH-xs-CmD" secondAttribute="leading" id="Jhb-ai-bOa"/>
                                 <constraint firstAttribute="bottom" secondItem="566-RL-Lqw" secondAttribute="bottom" id="Jr7-Lx-9OK"/>
                                 <constraint firstItem="uh3-W0-iOB" firstAttribute="leading" secondItem="38T-fs-gcr" secondAttribute="leading" id="LTs-JT-8f8"/>
-                                <constraint firstItem="oHW-6I-8eb" firstAttribute="top" secondItem="Ot6-re-eo3" secondAttribute="top" constant="60" id="QAD-Yo-1RW"/>
+                                <constraint firstItem="oHW-6I-8eb" firstAttribute="top" secondItem="Ot6-re-eo3" secondAttribute="top" constant="80" id="QAD-Yo-1RW"/>
                                 <constraint firstAttribute="trailing" secondItem="MWV-vq-sLD" secondAttribute="trailing" constant="40" id="V3k-DZ-U4N"/>
                                 <constraint firstItem="MWV-vq-sLD" firstAttribute="trailing" secondItem="38T-fs-gcr" secondAttribute="trailing" id="Zoy-JZ-QN3"/>
-                                <constraint firstAttribute="bottom" secondItem="uh3-W0-iOB" secondAttribute="bottom" constant="98" id="Zxm-hE-6WS"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uh3-W0-iOB" secondAttribute="bottom" constant="80" id="Zxm-hE-6WS"/>
                                 <constraint firstItem="MWV-vq-sLD" firstAttribute="leading" secondItem="elH-xs-CmD" secondAttribute="leading" id="dG9-hy-v9H"/>
                                 <constraint firstItem="o6F-dd-jOc" firstAttribute="leading" secondItem="0ML-L2-fk4" secondAttribute="leading" id="gJk-GZ-emH"/>
                                 <constraint firstItem="uh3-W0-iOB" firstAttribute="top" secondItem="38T-fs-gcr" secondAttribute="bottom" constant="40" id="hgh-Lk-NaB"/>
                                 <constraint firstItem="o6F-dd-jOc" firstAttribute="top" secondItem="0ML-L2-fk4" secondAttribute="bottom" constant="10" id="kda-Zp-iqt"/>
+                                <constraint firstAttribute="height" constant="1136" id="nuw-aR-vnO"/>
                                 <constraint firstItem="elH-xs-CmD" firstAttribute="top" secondItem="o6F-dd-jOc" secondAttribute="bottom" constant="20" id="oBi-ak-ej1"/>
                                 <constraint firstItem="38T-fs-gcr" firstAttribute="top" secondItem="MWV-vq-sLD" secondAttribute="bottom" constant="10" id="ovp-iE-9Gi"/>
                                 <constraint firstItem="MWV-vq-sLD" firstAttribute="top" secondItem="elH-xs-CmD" secondAttribute="bottom" constant="60" id="pWW-4u-XGo"/>
@@ -129,6 +130,7 @@
                 <constraint firstAttribute="bottom" secondItem="Z7u-ve-obd" secondAttribute="bottom" id="sFT-X7-W4p"/>
             </constraints>
             <connections>
+                <outlet property="contentViewHeightConstraint" destination="nuw-aR-vnO" id="UUN-Zw-olV"/>
                 <outlet property="contentViewWidthConstraint" destination="wnU-EN-NiI" id="rPp-z1-ejv"/>
                 <outlet property="loginButton" destination="uh3-W0-iOB" id="ugM-vD-vFL"/>
                 <outlet property="passwordField" destination="38T-fs-gcr" id="K09-9v-pu2"/>
