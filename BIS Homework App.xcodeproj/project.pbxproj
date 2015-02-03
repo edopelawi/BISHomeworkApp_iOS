@@ -24,6 +24,7 @@
 		8D04A8BF1A8096A500B7FCC5 /* BISLoginServiceFactorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8BE1A8096A500B7FCC5 /* BISLoginServiceFactorySpec.m */; };
 		8D04A8C41A80B84D00B7FCC5 /* BISSharedExampleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8C31A80B84D00B7FCC5 /* BISSharedExampleConstants.m */; };
 		8D04A8C61A80BE6200B7FCC5 /* BISHomeworkServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8C51A80BE6200B7FCC5 /* BISHomeworkServiceFactory.m */; };
+		8D04A8C81A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8C71A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m */; };
 		8D1EF0991A7F3281007C7155 /* BISURLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EF0981A7F3281007C7155 /* BISURLConstants.m */; };
 		8D1EF09A1A7F3281007C7155 /* BISURLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EF0981A7F3281007C7155 /* BISURLConstants.m */; };
 		8D4581561A7CE4D700B93AB8 /* BISLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4581531A7CE4D700B93AB8 /* BISLoginService.m */; };
@@ -67,6 +68,7 @@
 		8D04A8C21A80B84D00B7FCC5 /* BISSharedExampleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BISSharedExampleConstants.h; sourceTree = "<group>"; };
 		8D04A8C31A80B84D00B7FCC5 /* BISSharedExampleConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BISSharedExampleConstants.m; sourceTree = "<group>"; };
 		8D04A8C51A80BE6200B7FCC5 /* BISHomeworkServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISHomeworkServiceFactory.m; path = Factories/BISHomeworkServiceFactory.m; sourceTree = "<group>"; };
+		8D04A8C71A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISTeacherEmailServiceFactorySpec.m; path = Factories/BISTeacherEmailServiceFactorySpec.m; sourceTree = "<group>"; };
 		8D1EF0981A7F3281007C7155 /* BISURLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISURLConstants.m; path = Constants/BISURLConstants.m; sourceTree = "<group>"; };
 		8D4581521A7CE4D700B93AB8 /* BISLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginService.h; path = Services/BISLoginService.h; sourceTree = "<group>"; };
 		8D4581531A7CE4D700B93AB8 /* BISLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginService.m; path = Services/BISLoginService.m; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				8D04A8BE1A8096A500B7FCC5 /* BISLoginServiceFactorySpec.m */,
 				8D04A8B21A80669800B7FCC5 /* BISNetworkManagerFactorySpec.m */,
 				8D04A8B41A80789200B7FCC5 /* BISNetworkServiceFactorySpec.m */,
+				8D04A8C71A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				8D04A8B91A808BF800B7FCC5 /* BISLoginService.m in Sources */,
 				8D04A8981A80600400B7FCC5 /* BISNetworkManagerFactory.m in Sources */,
 				8D04A8AC1A80604A00B7FCC5 /* BISHomeworkServiceSpec.m in Sources */,
+				8D04A8C81A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m in Sources */,
 				8D04A8C41A80B84D00B7FCC5 /* BISSharedExampleConstants.m in Sources */,
 				8D04A8B81A808BD900B7FCC5 /* BISNetworkService.m in Sources */,
 				8D04A8B71A807E8400B7FCC5 /* BISNetworkServiceInitSpec.m in Sources */,

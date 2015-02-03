@@ -18,6 +18,12 @@
 
 @implementation BISTeacherEmailService
 
++ (BISTeacherEmailService *)teacherEmailService
+{
+    BISNetworkService *networkService = [BISNetworkService networkService];
+    return [[BISTeacherEmailService alloc] initWithNetworkService:networkService];
+}
+
 - (instancetype)initWithNetworkService:(BISNetworkService *)networkService
 {
     NSParameterAssert(networkService);

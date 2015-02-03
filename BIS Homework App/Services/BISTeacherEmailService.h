@@ -16,6 +16,8 @@ typedef void (^BISTeacherEmailServiceFailureBlock) (NSString *message);
 
 @interface BISTeacherEmailService : NSObject <BISNetworkServiceDependant>
 
++ (BISTeacherEmailService *)teacherEmailService;
+
 - (void)retrieveTeacherEmailsWithSuccess:(BISTeacherEmailServiceSuccessBlock)successBlock
                                  failure:(BISTeacherEmailServiceFailureBlock)failureBlock;
 
