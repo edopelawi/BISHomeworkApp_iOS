@@ -22,7 +22,7 @@ describe(@"on building AFHTTPRequestOperationManager", ^{
     });
     
     it(@"should return object of AFHTTPRequestOperationManager class ", ^{
-        expect(operationManager.class).to.equal(AFHTTPRequestOperationManager.class);
+        expect(operationManager).to.beInstanceOf(AFHTTPRequestOperationManager.class);
     });
     
     it(@"should set BIS server address as base URL", ^{
@@ -31,13 +31,11 @@ describe(@"on building AFHTTPRequestOperationManager", ^{
     });
     
     it(@"should AFHTTPRequestSerializer as request serializer", ^{
-        Class requestSerializerClass = operationManager.requestSerializer.class;
-        expect(requestSerializerClass).to.equal([AFHTTPRequestSerializer class]);
+        expect(operationManager.requestSerializer).to.beInstanceOf([AFHTTPRequestSerializer class]);
     });
     
     it(@"should AFXMLParserResponseSerializer as response serializer", ^{
-        Class responseSerializerClass = operationManager.responseSerializer.class;
-        expect(responseSerializerClass).to.equal([AFXMLParserResponseSerializer class]);
+        expect(operationManager.responseSerializer).to.beInstanceOf([AFXMLParserResponseSerializer class]);
     });
     
     it(@"should have text/xml as acceptable content type", ^{
