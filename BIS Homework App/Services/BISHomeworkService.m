@@ -18,6 +18,12 @@
 
 @implementation BISHomeworkService
 
++ (BISHomeworkService *)homeworkService
+{
+    BISNetworkService *networkService = [BISNetworkService networkService];
+    return [[BISHomeworkService alloc] initWithNetworkService:networkService];
+}
+
 - (instancetype)initWithNetworkService:(BISNetworkService *)networkService
 {
     NSParameterAssert(networkService);

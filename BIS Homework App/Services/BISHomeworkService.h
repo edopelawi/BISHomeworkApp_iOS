@@ -16,6 +16,8 @@ typedef void (^BISHomeworkServiceFailureBlock) (NSString *message);
 
 @interface BISHomeworkService : NSObject <BISNetworkServiceDependant>
 
++ (BISHomeworkService *)homeworkService;
+
 - (void)retrieveHomeworksWithSuccess:(BISHomeworkServiceSuccessBlock)successBlock
                              failure:(BISHomeworkServiceFailureBlock)failureBlock;
 
