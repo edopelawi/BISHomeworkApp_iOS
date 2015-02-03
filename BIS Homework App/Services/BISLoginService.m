@@ -26,16 +26,6 @@
     return [[BISLoginService alloc] initWithNetworkService:networkService];
 }
 
-- (instancetype)init
-{
-    NSString *exceptionString = @"Invalid initializer for BISNetworkService class. Use - (instancetype)initWithNetworkService:(BISNetworkService *)networkService instead.";
-    
-    [NSException raise:NSInternalInconsistencyException
-                format:@"%@",exceptionString];
-    
-    return nil;
-}
-
 - (instancetype)initWithNetworkService:(BISNetworkService *)networkService
 {
     NSParameterAssert(networkService);

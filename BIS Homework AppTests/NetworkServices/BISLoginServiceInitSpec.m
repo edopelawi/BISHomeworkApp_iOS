@@ -13,20 +13,14 @@ SpecBegin(LoginServiceInitialization)
 
 __block BISLoginService *loginService;
 
-it(@"should raise NSInternalInconsistencyException if initialized using init: method", ^{
-    expect(^{
-        loginService = [BISLoginService new];
-    }).to.raise(NSInternalInconsistencyException);
-});
-
-describe(@"on initWithRequestOperationManager:", ^{
+describe(@"on initWithNetworkService:", ^{
     it(@"should raise exception if nil passed as parameter", ^{
         expect(^{
             loginService = [[BISLoginService alloc] initWithNetworkService:nil];
         }).to.raise(NSInternalInconsistencyException);
     });
     
-    it(@"should return BISloginService object", ^{
+    it(@"should return BISLoginService object", ^{
         loginService = [[BISLoginService alloc] initWithNetworkService:[BISNetworkService networkService]];
         expect(loginService).to.beInstanceOf(BISLoginService.class);
     });

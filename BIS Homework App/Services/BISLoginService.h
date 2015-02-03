@@ -17,10 +17,6 @@ typedef void (^BISLoginServiceFailureBlock) (NSString *errorMessage);
 
 + (BISLoginService *)loginService;
 
-/// Deprecated. Use @c initWithNetworkService: instead.
-- (instancetype)init __deprecated;
-
-/// Initialization method for BISLoginService object. You should use this method instead of the normal @p init.
 - (instancetype)initWithNetworkService:(BISNetworkService *)networkService;
 
 - (void)loginWithParameters:(NSDictionary *)parameters
