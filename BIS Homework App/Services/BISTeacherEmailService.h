@@ -7,15 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BISNetworkServiceDependant.h"
 
 typedef void (^BISTeacherEmailServiceSuccessBlock) (NSArray *emails);
 typedef void (^BISTeacherEmailServiceFailureBlock) (NSString *message);
 
 @class BISNetworkService;
 
-@interface BISTeacherEmailService : NSObject
-
-- (instancetype)initWithNetworkService:(BISNetworkService *)networkService;
+@interface BISTeacherEmailService : NSObject <BISNetworkServiceDependant>
 
 - (void)retrieveTeacherEmailsWithSuccess:(BISTeacherEmailServiceSuccessBlock)successBlock
                                  failure:(BISTeacherEmailServiceFailureBlock)failureBlock;

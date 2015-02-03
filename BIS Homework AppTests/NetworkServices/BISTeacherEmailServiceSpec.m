@@ -9,6 +9,7 @@
 #import "BISTeacherEmailService.h"
 #import "BISNetworkService.h"
 #import "BISURLConstants.h"
+#import "BISSharedExampleConstants.h"
 
 SpecBegin(TeacherEmailService)
 
@@ -26,8 +27,7 @@ __block BISNetworkServiceSuccessBlock networkSuccessBlock;
 __block BISNetworkServiceFailureBlock networkFailureBlock;
 
 beforeEach(^{
-    id operationManager = OCMPartialMock([AFHTTPRequestOperationManager new]);
-    networkService = OCMPartialMock([[BISNetworkService alloc] initWithRequestOperationManager:operationManager]);
+    networkService = OCMPartialMock([BISNetworkService new]);
     
     emailService = [[BISTeacherEmailService alloc] initWithNetworkService:networkService];
     
@@ -52,6 +52,11 @@ beforeEach(^{
         [invocation getArgument:&networkSuccessBlock atIndex:4];
         [invocation getArgument:&networkFailureBlock atIndex:5];
     });
+});
+
+describe(@"BISNetworkServiceDependant behavior", ^{
+    NSDictionary *data = @{BISSharedExampleClassKey : [BISTeacherEmailService class]};
+    itBehavesLike(BISSharedExampleNetworkServiceDependant, data);
 });
 
 describe(@"on retrieving teacher emails", ^{
