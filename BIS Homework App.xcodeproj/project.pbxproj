@@ -27,6 +27,11 @@
 		8D04A8C81A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8C71A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m */; };
 		8D04A8D11A80C58C00B7FCC5 /* BISLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8D01A80C58C00B7FCC5 /* BISLoginView.m */; };
 		8D04A8D31A80C5AF00B7FCC5 /* BISLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D04A8D21A80C5AF00B7FCC5 /* BISLoginView.xib */; };
+		8D04A8D71A80D38700B7FCC5 /* BISLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8D61A80D38700B7FCC5 /* BISLoginViewModel.m */; };
+		8D04A8D91A80D39B00B7FCC5 /* BISLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8D61A80D38700B7FCC5 /* BISLoginViewModel.m */; };
+		8D04A8DB1A80D3B200B7FCC5 /* BISLoginViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8DA1A80D3B200B7FCC5 /* BISLoginViewModelSpec.m */; };
+		8D04A8DC1A80D44B00B7FCC5 /* BISLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8D01A80C58C00B7FCC5 /* BISLoginView.m */; };
+		8D04A8DD1A80D45400B7FCC5 /* BISLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D04A8D21A80C5AF00B7FCC5 /* BISLoginView.xib */; };
 		8D04A8E11A80DD5A00B7FCC5 /* BISLoginParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8E01A80DD5A00B7FCC5 /* BISLoginParameter.m */; };
 		8D04A8E21A80DD5A00B7FCC5 /* BISLoginParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8E01A80DD5A00B7FCC5 /* BISLoginParameter.m */; };
 		8D04A8E61A80DDA300B7FCC5 /* BISLoginParameterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D04A8E51A80DDA300B7FCC5 /* BISLoginParameterSpec.m */; };
@@ -77,9 +82,11 @@
 		8D04A8CF1A80C58C00B7FCC5 /* BISLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginView.h; path = Views/BISLoginView.h; sourceTree = "<group>"; };
 		8D04A8D01A80C58C00B7FCC5 /* BISLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginView.m; path = Views/BISLoginView.m; sourceTree = "<group>"; };
 		8D04A8D21A80C5AF00B7FCC5 /* BISLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BISLoginView.xib; path = Views/BISLoginView.xib; sourceTree = "<group>"; };
+		8D04A8D51A80D38700B7FCC5 /* BISLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginViewModel.h; path = ViewModels/BISLoginViewModel.h; sourceTree = "<group>"; };
+		8D04A8D61A80D38700B7FCC5 /* BISLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginViewModel.m; path = ViewModels/BISLoginViewModel.m; sourceTree = "<group>"; };
+		8D04A8DA1A80D3B200B7FCC5 /* BISLoginViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginViewModelSpec.m; path = ViewModels/BISLoginViewModelSpec.m; sourceTree = "<group>"; };
 		8D04A8DF1A80DD5A00B7FCC5 /* BISLoginParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginParameter.h; path = Models/BISLoginParameter.h; sourceTree = "<group>"; };
 		8D04A8E01A80DD5A00B7FCC5 /* BISLoginParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginParameter.m; path = Models/BISLoginParameter.m; sourceTree = "<group>"; };
-		8D04A8E41A80DDA300B7FCC5 /* BISLoginParameterSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginParameterSpec.h; path = Models/BISLoginParameterSpec.h; sourceTree = "<group>"; };
 		8D04A8E51A80DDA300B7FCC5 /* BISLoginParameterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISLoginParameterSpec.m; path = Models/BISLoginParameterSpec.m; sourceTree = "<group>"; };
 		8D1EF0981A7F3281007C7155 /* BISURLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BISURLConstants.m; path = Constants/BISURLConstants.m; sourceTree = "<group>"; };
 		8D4581521A7CE4D700B93AB8 /* BISLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BISLoginService.h; path = Services/BISLoginService.h; sourceTree = "<group>"; };
@@ -190,6 +197,23 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		8D04A8D41A80D35800B7FCC5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8D04A8D51A80D38700B7FCC5 /* BISLoginViewModel.h */,
+				8D04A8D61A80D38700B7FCC5 /* BISLoginViewModel.m */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		8D04A8D81A80D39200B7FCC5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8D04A8DA1A80D3B200B7FCC5 /* BISLoginViewModelSpec.m */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
 		8D04A8DE1A80DCEA00B7FCC5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +226,6 @@
 		8D04A8E31A80DD7D00B7FCC5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8D04A8E41A80DDA300B7FCC5 /* BISLoginParameterSpec.h */,
 				8D04A8E51A80DDA300B7FCC5 /* BISLoginParameterSpec.m */,
 			);
 			name = Models;
@@ -242,10 +265,12 @@
 			children = (
 				8D4581581A7CEC9200B93AB8 /* Constants */,
 				8D04A8911A805FBD00B7FCC5 /* Factories */,
+				8D04A8DE1A80DCEA00B7FCC5 /* Models */,
 				8D04A8C01A80B33600B7FCC5 /* Protocols */,
 				8DBF3D321A7BB11100A2C82A /* Services */,
 				8D04A8CE1A80C57500B7FCC5 /* Views */,
 				8DBF3D291A7BAD4500A2C82A /* ViewControllers */,
+				8D04A8D41A80D35800B7FCC5 /* ViewModels */,
 				8DBF3D071A7BA61000A2C82A /* BISAppDelegate.h */,
 				8DBF3D081A7BA61000A2C82A /* BISAppDelegate.m */,
 				8DBF3D101A7BA61000A2C82A /* Images.xcassets */,
@@ -270,6 +295,7 @@
 				8D04A8991A80600E00B7FCC5 /* Factories */,
 				8D04A8E31A80DD7D00B7FCC5 /* Models */,
 				8D04A8A71A80604A00B7FCC5 /* NetworkServices */,
+				8D04A8D81A80D39200B7FCC5 /* ViewModels */,
 				8DBF3D1D1A7BA61000A2C82A /* Supporting Files */,
 			);
 			path = "BIS Homework AppTests";
@@ -416,6 +442,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D04A8DD1A80D45400B7FCC5 /* BISLoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +523,7 @@
 				8DBF3D2C1A7BAD7800A2C82A /* BISLoginViewController.m in Sources */,
 				8D04A8971A80600400B7FCC5 /* BISNetworkManagerFactory.m in Sources */,
 				8D04A8E11A80DD5A00B7FCC5 /* BISLoginParameter.m in Sources */,
+				8D04A8D71A80D38700B7FCC5 /* BISLoginViewModel.m in Sources */,
 				8D1EF0991A7F3281007C7155 /* BISURLConstants.m in Sources */,
 				8D5FD75A1A7F3C1D0067ED6A /* BISTeacherEmailService.m in Sources */,
 				8D5FD7521A7F36A00067ED6A /* BISHomeworkService.m in Sources */,
@@ -511,14 +539,17 @@
 				8D04A8B91A808BF800B7FCC5 /* BISLoginService.m in Sources */,
 				8D04A8E21A80DD5A00B7FCC5 /* BISLoginParameter.m in Sources */,
 				8D04A8981A80600400B7FCC5 /* BISNetworkManagerFactory.m in Sources */,
+				8D04A8DC1A80D44B00B7FCC5 /* BISLoginView.m in Sources */,
 				8D04A8AC1A80604A00B7FCC5 /* BISHomeworkServiceSpec.m in Sources */,
 				8D04A8C81A80C01000B7FCC5 /* BISTeacherEmailServiceFactorySpec.m in Sources */,
 				8D04A8C41A80B84D00B7FCC5 /* BISSharedExampleConstants.m in Sources */,
 				8D04A8B81A808BD900B7FCC5 /* BISNetworkService.m in Sources */,
 				8D04A8B71A807E8400B7FCC5 /* BISNetworkServiceInitSpec.m in Sources */,
+				8D04A8DB1A80D3B200B7FCC5 /* BISLoginViewModelSpec.m in Sources */,
 				8D04A8E61A80DDA300B7FCC5 /* BISLoginParameterSpec.m in Sources */,
 				8D1EF09A1A7F3281007C7155 /* BISURLConstants.m in Sources */,
 				8D04A8BF1A8096A500B7FCC5 /* BISLoginServiceFactorySpec.m in Sources */,
+				8D04A8D91A80D39B00B7FCC5 /* BISLoginViewModel.m in Sources */,
 				8D04A8AD1A80604A00B7FCC5 /* BISLoginServiceSpec.m in Sources */,
 				8D04A8C61A80BE6200B7FCC5 /* BISHomeworkServiceFactory.m in Sources */,
 				8D04A8B31A80669800B7FCC5 /* BISNetworkManagerFactorySpec.m in Sources */,
