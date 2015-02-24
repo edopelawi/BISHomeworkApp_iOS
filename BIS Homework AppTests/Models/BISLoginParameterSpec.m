@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Ice House-Internship. All rights reserved.
 //
 
-#import "BISLoginParameterSpec.h"
 #import "BISLoginParameter.h"
 #import <Mantle.h>
 
