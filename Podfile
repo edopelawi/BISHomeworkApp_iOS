@@ -5,7 +5,7 @@ pod 'AFNetworking', '~> 2.5'
 pod 'TPKeyboardAvoiding', '~> 1.2'
 pod 'Mantle', '~> 1.5'
 target 'BIS Homework AppTests' do
-	pod 'Specta', '~> 0.2'
+	pod 'Specta', '~> 0.3'
 	pod 'Expecta', '~> 0.3'
 	pod 'OCMock', '~> 3.1'
 end
