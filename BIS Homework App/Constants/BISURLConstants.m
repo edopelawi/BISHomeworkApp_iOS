@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 NSString * const BISURLConstantBase = @"http://203.153.99.219/";
-NSString * const BISURLConstantLoginPath = @"/bisdev/login.php";
+NSString * const BISURLConstantLoginPath = @"/bisdev/login-api.php";
 NSString * const BISURLConstantHomeworkPath = @"/bisdev/hw-api.php?q=getCurrentHomeworkList";
 NSString * const BISURLConstantTeacherEmailsPath = @"/bisdev/hw-api.php?q=getEmailList";
