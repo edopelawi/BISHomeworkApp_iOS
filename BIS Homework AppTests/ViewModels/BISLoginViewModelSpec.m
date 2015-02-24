@@ -87,6 +87,11 @@ describe(@"on login button tapped", ^{
     
     __block BISLoginParameter *passedParameter;
     
+    __block BOOL willLoginHandlerExecuted = NO;
+    __block void(^willLoginHandler)() = ^{
+        willLoginHandlerExecuted = YES;
+    };
+    
     beforeEach(^{
         
         username = @"username";
@@ -97,7 +102,14 @@ describe(@"on login button tapped", ^{
         parameter.username = username;
         parameter.password = password;
         
+        willLoginHandlerExecuted = NO;
+        [loginViewModel setWillLoginHandler:willLoginHandler];
+        
         if (loginViewButtonTappedBlock) loginViewButtonTappedBlock(username, password);
+    });
+    
+    it(@"should call willLoginHandler that has been set", ^{
+        expect(willLoginHandlerExecuted).to.beTruthy();
     });
     
     it(@"should call login service's method", ^{

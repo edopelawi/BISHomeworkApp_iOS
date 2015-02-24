@@ -16,6 +16,7 @@
 - (instancetype)initWithLoginView:(BISLoginView*)loginView
                      loginService:(BISLoginService *)loginService;
 
+- (void)setWillLoginHandler:(void(^)())block;
 - (void)setLoginSuccessHandler:(void(^)())block;
 - (void)setLoginFailureHandler:(void(^)(NSString *message))block;
 

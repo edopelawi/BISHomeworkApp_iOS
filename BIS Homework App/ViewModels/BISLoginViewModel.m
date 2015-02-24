@@ -16,6 +16,7 @@
 @property (strong, nonatomic) BISLoginView *loginView;
 @property (strong, nonatomic) BISLoginService *loginService;
 
+@property (strong, nonatomic) void (^willLoginHandler)();
 @property (strong, nonatomic) void (^loginSuccessHandler)();
 @property (strong, nonatomic) void (^loginFailureHandler)(NSString *message);
 
@@ -44,8 +45,11 @@
 - (void)prepareLoginViewHandler
 {
     __weak __typeof(self) weakSelf = self;
+    
     [_loginView setLoginButtonTappedHandler:^(NSString *username, NSString *password) {
-
+        
+        if (weakSelf.willLoginHandler) weakSelf.willLoginHandler();
+        
         BISLoginParameter *parameter = [BISLoginParameter new];
         parameter.username = username;
         parameter.password = password;
@@ -61,7 +65,7 @@
     __weak __typeof(self) weakSelf = self;
     [_loginService loginWithParameters:parameterDictionary
                                success:^{
-                                   if (weakSelf.loginSuccessHandler)                                    weakSelf.loginSuccessHandler();
+                                   if (weakSelf.loginSuccessHandler) weakSelf.loginSuccessHandler();
                                }
                                failure:^(NSString *errorMessage) {
                                    if (weakSelf.loginFailureHandler) weakSelf.loginFailureHandler(errorMessage);
