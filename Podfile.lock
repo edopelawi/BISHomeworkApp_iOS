@@ -26,6 +26,7 @@ PODS:
   - Mantle/extobjc (1.5.4)
   - OCMock (3.1.2)
   - Specta (0.3.2)
+  - SVProgressHUD (1.1.2)
   - TPKeyboardAvoiding (1.2.4)
 
 DEPENDENCIES:
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - Mantle (~> 1.5)
   - OCMock (~> 3.1)
   - Specta (~> 0.3)
+  - SVProgressHUD (~> 1.1)
   - TPKeyboardAvoiding (~> 1.2)
 
 SPEC CHECKSUMS:
@@ -42,6 +44,7 @@ SPEC CHECKSUMS:
   Mantle: d5fbaf30fbc58031223af13812c060e15934a1fe
   OCMock: ecdd510b73ef397f2f97274785c1e87fd147c49f
   Specta: 698a58ffa5ec948327d3b92eab50ca58d7f4fbe8
+  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
   TPKeyboardAvoiding: 925e1e1912597d1a4956697eec3bd9656552153c
 
 COCOAPODS: 0.35.0
