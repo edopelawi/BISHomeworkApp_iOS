@@ -20,6 +20,7 @@ __block BISNetworkServiceSuccessBlock successBlock;
 __block BISNetworkServiceFailureBlock failureBlock;
 __block BOOL successBlockExecuted;
 __block BOOL failureBlockExecuted;
+__block NSError *failureResponse;
 
 __block NSString *managerPath;
 __block NSDictionary *managerParameters;
@@ -40,10 +41,12 @@ beforeEach(^{
     
     failureBlock = ^(NSError *error){
         failureBlockExecuted = YES;
+        failureResponse = error;
     };
     
     successBlockExecuted = NO;
     failureBlockExecuted = NO;
+    failureResponse = nil;
     
     void (^managerStubBlock) (NSInvocation *invocation) = ^(NSInvocation *invocation){
         
@@ -60,10 +63,10 @@ beforeEach(^{
                   success:[OCMArg any]
                   failure:[OCMArg any]]).andDo(managerStubBlock);
     
-    OCMStub([manager POST:[OCMArg any]
-               parameters:[OCMArg any]
-                  success:[OCMArg any]
-                  failure:[OCMArg any]]).andDo(managerStubBlock);
+    OCMStub([manager GET:[OCMArg any]
+              parameters:[OCMArg any]
+                 success:[OCMArg any]
+                 failure:[OCMArg any]]).andDo(managerStubBlock);
 });
 
 describe(@"on postToPath:parameters:success:failure:", ^{
@@ -100,6 +103,47 @@ describe(@"on postToPath:parameters:success:failure:", ^{
             expect(successBlockExecuted).to.beTruthy();
         });
     });
+    
+    context(@"when request fails", ^{
+        
+        __block AFHTTPRequestOperation *operation;
+        __block NSHTTPURLResponse *response;
+        __block NSInteger statusCode;
+       
+        __block NSError *error;
+        
+        before(^{
+           if (!managerFailureBlock) return;
+           
+           operation = OCMPartialMock([AFHTTPRequestOperation new]);
+           response = OCMPartialMock([NSHTTPURLResponse new]);
+           statusCode = 404;
+           error = [[NSError alloc] initWithDomain:@"errorDomain"
+                                              code:-1001
+                                          userInfo:@{}];
+            
+           OCMStub(operation.response).andReturn(response);
+           OCMStub(response.statusCode).andReturn(statusCode);
+           
+           managerFailureBlock(operation, error);
+       });
+        
+       it(@"should execute the failure block", ^{
+           expect(failureBlockExecuted).to.beTruthy();
+       });
+        
+       it(@"should pass error's domain to the failure response's domain", ^{
+           expect(failureResponse.domain).to.equal(error.domain);
+       });
+        
+       it(@"should pass AFHTTPRequestOperation's response status code to the failure response's code", ^{
+           expect(failureResponse.code).to.equal(statusCode);
+       });        
+        
+       it(@"should pass error's userInfo to the failure response's userInfo", ^{
+           expect(failureResponse.userInfo).to.equal(error.userInfo);
+       });
+    });
 
 });
 
@@ -135,6 +179,43 @@ describe(@"on getFromPath:parameters:success:failure:", ^{
         
         it(@"should execute the success block", ^{
             expect(successBlockExecuted).to.beTruthy();
+        });
+    });
+   
+    context(@"when request fails", ^{
+        
+        __block AFHTTPRequestOperation *operation;
+        __block NSHTTPURLResponse *response;
+        __block NSInteger statusCode;
+        
+        __block NSError *error;
+        
+        before(^{
+            if (!managerFailureBlock) return;
+            
+            operation = OCMPartialMock([AFHTTPRequestOperation new]);
+            response = OCMPartialMock([NSHTTPURLResponse new]);
+            statusCode = 404;
+            error = [[NSError alloc] initWithDomain:@"errorDomain"
+                                               code:-1001
+                                           userInfo:@{}];
+            
+            OCMStub(operation.response).andReturn(response);
+            OCMStub(response.statusCode).andReturn(statusCode);
+            
+            managerFailureBlock(operation, error);
+        });
+        
+        it(@"should pass error's domain to the failure response's domain", ^{
+            expect(failureResponse.domain).to.equal(error.domain);
+        });
+        
+        it(@"should pass AFHTTPRequestOperation's response status code to the failure response's code", ^{
+            expect(failureResponse.code).to.equal(statusCode);
+        });
+        
+        it(@"should pass error's userInfo to the failure response's userInfo", ^{
+            expect(failureResponse.userInfo).to.equal(error.userInfo);
         });
     });
     

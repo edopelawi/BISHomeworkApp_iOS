@@ -50,7 +50,12 @@
                         if (successBlock) successBlock(requestObject);
                     }
                     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                        if (failureBlock) failureBlock(error);
+                        NSInteger statusCode = operation.response.statusCode;
+                        NSError *failureError = [[NSError alloc] initWithDomain:error.domain
+                                                                           code:statusCode
+                                                                       userInfo:error.userInfo];
+                        
+                        if (failureBlock) failureBlock(failureError);
                     }];
 }
 
@@ -65,7 +70,12 @@
                        if (successBlock) successBlock(requestObject);
                    }
                    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                       if (failureBlock) failureBlock(error);
+                       NSInteger statusCode = operation.response.statusCode;
+                       NSError *failureError = [[NSError alloc] initWithDomain:error.domain
+                                                                          code:statusCode
+                                                                      userInfo:error.userInfo];
+                       
+                       if (failureBlock) failureBlock(failureError);
                    }];
 }
 
