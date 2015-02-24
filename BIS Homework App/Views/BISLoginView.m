@@ -13,7 +13,6 @@
 @interface BISLoginView ()
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *contentViewWidthConstraint;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *contentViewHeightConstraint;
 
 @property (strong, nonatomic) IBOutlet UITextField *userNameField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
@@ -47,9 +46,7 @@
 - (void)setContentViewSize
 {
     CGRect screenBounds = [UIScreen mainScreen].bounds;
-    
     _contentViewWidthConstraint.constant = CGRectGetWidth(screenBounds);
-    _contentViewHeightConstraint.constant = CGRectGetHeight(screenBounds);
 }
 
 - (void)setColors
