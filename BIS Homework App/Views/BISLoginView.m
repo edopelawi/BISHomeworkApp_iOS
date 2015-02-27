@@ -9,6 +9,8 @@
 #import "BISLoginView.h"
 
 #import <QuartzCore/QuartzCore.h>
+#import <ReactiveCocoa.h>
+#import <RACEXTScope.h>
 
 @interface BISLoginView ()
 
@@ -39,6 +41,7 @@
     [self setColors];
     [self setFonts];
     [self setBorders];
+    [self setSignalHandlers];
 }
 
 #pragma mark - Layouts -
@@ -83,5 +86,30 @@
     if (_loginButtonTappedHandler) _loginButtonTappedHandler(_userNameField.text, _passwordField.text);
 }
 
+#pragma mark - Signal Handlers
+
+- (void)setSignalHandlers
+{
+    RACSignal *nameValidSignal = [_userNameField.rac_textSignal map:^id(NSString *name) {
+        return name.length > 3 ? @(YES) : @(NO);
+    }];
+    
+    RACSignal *passwordValidSignal = [_passwordField.rac_textSignal map:^id(NSString *password) {
+        return password.length > 3 ? @(YES) : @(NO);
+    }];
+    
+    @weakify(self)
+
+    [[RACSignal
+      combineLatest:@[nameValidSignal, passwordValidSignal]
+      reduce:(id)^NSNumber *(NSNumber *nameValid, NSNumber *passwordValid) {
+          return @([nameValid boolValue] && [passwordValid boolValue]);
+      }]
+      subscribeNext:^(NSNumber *enable) {
+          @strongify(self);
+          self.loginButton.enabled = [enable boolValue];
+          self.loginButton.alpha = [enable boolValue] ? 1 : 0.5;
+      }];
+}
 
 @end
