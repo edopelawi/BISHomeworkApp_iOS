@@ -24,6 +24,7 @@
 
 - (void)loadView
 {
+    self.automaticallyAdjustsScrollViewInsets = NO;
     _mainView = [BISLoginView new];
     [self setView:_mainView];
 }
@@ -31,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES];
     [self prepareViewModel];
 }
 

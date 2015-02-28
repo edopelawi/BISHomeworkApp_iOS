@@ -89,7 +89,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh3-W0-iOB">
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh3-W0-iOB">
                                     <rect key="frame" x="40" y="478" width="520" height="44"/>
                                     <color key="backgroundColor" red="0.96862745100000003" green="0.090196078430000007" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
